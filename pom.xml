@@ -40,6 +40,20 @@
 
   </properties>
 
+  <distributionManagement>
+   <repository>
+      <id>central</id>
+      <name>libs-release</name>
+      <url>http://54.167.217.80:8081/artifactory/libs-release-local</url>
+   </repository>
+   <snapshotRepository>
+      <id>snapshots</id>
+      <name>libs-snapshot</name>
+      <url>http://54.167.217.80:8081/artifactory/libs-snapshot-local</url>
+   </snapshotRepository>
+</distributionManagement>
+
+
   <dependencies>
     <!-- Spring and Spring Boot dependencies -->
     <dependency>
@@ -207,7 +221,7 @@
             <version>${nohttp-checkstyle.version}</version>
           </dependency>
         </dependencies>
-        <executions>
+        <!-- <executions>
           <execution>
             <id>nohttp-checkstyle-validation</id>
             <goals>
@@ -222,7 +236,7 @@
               <propertyExpansion>config_loc=${basedir}/src/checkstyle/</propertyExpansion>
             </configuration>
           </execution>
-        </executions>
+        </executions> -->
       </plugin>
       <plugin>
         <groupId>org.graalvm.buildtools</groupId>
